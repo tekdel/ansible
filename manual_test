@@ -1,0 +1,2 @@
+docker build -t ansible_test . --no-cache
+docker run -it ansible_test bash

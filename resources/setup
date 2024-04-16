@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+pacman -Syu --noconfirm
+pacman -S ansible git sudo --noconfirm
+git clone https://github.com/tekdel/dev $1
