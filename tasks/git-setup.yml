@@ -1,0 +1,28 @@
+- name: Git personal setup email
+  git_config:
+    name: user.email
+    scope: global
+    value: "andrei@dolgov.dev"
+  tags:
+  - git-personal
+- name: Git personal setup name
+  git_config:
+    name: user.name
+    scope: global
+    value: "Andrei"
+  tags:
+  - git-personal
+- name: Git Folio setup email
+  git_config:
+    name: user.email
+    scope: global
+    value: "andrei@foliotravel.com"
+  tags:
+  - git-folio
+- name: Git Folio setup name
+  git_config:
+    name: user.name
+    scope: global
+    value: "andrei"
+  tags:
+  - git-folio

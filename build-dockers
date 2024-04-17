@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker build . -t new-computer .
+docker run -it new-computer bash
