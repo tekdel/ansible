@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-su -c 'pacman -Syu --noconfirm' root
-su -c 'pacman -S ansible git sudo --noconfirm' root
+sudo pacman -Syu --noconfirm
+sudo pacman -S ansible git --noconfirm
+
 git clone https://github.com/tekdel/ansible $1
