@@ -1,0 +1,18 @@
+- name: Install dependencies
+  community.general.pacman:
+    name:
+      - base-devel
+      - libx11
+      - libxinerama
+      - libxft
+      - freetype2
+    state: present
+- name: Clone dwm
+  ansible.builtin.git:
+    repo: 'https://github.com/tekdel/dwm.git'
+    dest: ~/tekdel/dwm
+    become: true
+    become_user: andrei
+- name: Install dwm
+  shell: chsh -s "make && make install"
+
