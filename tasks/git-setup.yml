@@ -9,7 +9,7 @@
   git_config:
     name: user.name
     scope: global
-    value: "Andrei"
+    value: "Andrei Dolgov"
   tags:
   - git-personal
 - name: Git Folio setup email
@@ -23,6 +23,20 @@
   git_config:
     name: user.name
     scope: global
-    value: "andrei"
+    value: "Andrei Dolgov"
   tags:
   - git-folio
+- name: Git CurbWaste setup email
+  git_config:
+    name: user.email
+    scope: global
+    value: "andrei@curbwaste.com"
+  tags:
+  - git-curbwaste
+- name: Git CurbWaste setup name
+  git_config:
+    name: user.name
+    scipe: global
+    value: "Andrei Dolgov"
+  tags:
+  - git-curbwaste
