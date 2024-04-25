@@ -10,5 +10,6 @@
       - mesa
       - i3
       - i3blocks
+      - ttf-jetbrains-mono-nerd
   tags:
     - i3
