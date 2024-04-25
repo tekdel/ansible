@@ -15,11 +15,25 @@
   become_user: andrei
   ansible.builtin.git:
     repo: 'https://github.com/tekdel/dwm.git'
-    dest: ~/personal/dwm
+    dest: "{{ personal }}/dwm"
   tags:
     - dwm
 - name: Install dwm
-  shell: cd ~/personal/dwm && make && sudo make install
+  shell: cd "{{ personal }}/dwm" && make && sudo make install
   tags:
     - dwm
+- name: Clone dwmblocks
+  become: true
+  become_user: andrei
+  ansible.builtin.git:
+    repo: 'https://github.com/tekdel/dwmblocks.git'
+    dest: "{{ personal }}/dwmblocks"
+  tags:
+    - dwm
+- name: Install dwmblocks
+  shell: cd "{{ personal }}/dwmblocks" && make && sudo make install
+  tags:
+    - dwm
+
+
 
