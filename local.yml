@@ -5,6 +5,7 @@
     personal: "{{ lookup('env', 'HOME') }}/personal"
   tasks:
     - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/st-setup.yml
     # - import_tasks: tasks/dwm.yml
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/productivity-tools.yml

@@ -1,0 +1,23 @@
+- name: Install dependencies
+  become: true
+  community.general.pacman:
+    state: present
+    name:
+      - base-devel
+      - libxft
+  tags:
+    - st
+
+- name: Clone st
+  become: true
+  become_user: andrei
+  ansible.builtin.git:
+    repo: 'https://github.com/tekdel/st.git'
+    dest: "{{ personal }}/st"
+  tags:
+    - st
+- name: Install st
+  shell: cd "{{ personal }}/st" && make && sudo make install
+  tags:
+    - st
+
