@@ -1,0 +1,10 @@
+- name: Install i3
+  become: true
+  community.general.pacman:
+    update_cache: true
+    state: present
+    name:
+      - i3
+      - i3blocks
+  tags:
+    - i3
