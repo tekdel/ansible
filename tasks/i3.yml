@@ -4,6 +4,10 @@
     update_cache: true
     state: present
     name:
+      - xorg-server
+      - xorg-xinit
+      - xterm
+      - mesa
       - i3
       - i3blocks
   tags:
