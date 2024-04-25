@@ -1,4 +1,4 @@
-FROM archlinux:latest
+FROM archlinux:latest AS base
 
 RUN pacman -Syu --noconfirm
 RUN pacman -S git ansible sudo --noconfirm
@@ -12,6 +12,7 @@ RUN sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoer
 USER andrei
 WORKDIR /home/andrei
 
-COPY . .
+FROM base 
+COPY --chown=andrei . .
 
 CMD ["sh" , "-c", "resources/setup"]
