@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 docker build -t new-computer .
+# docker run -it new-computer ansible-playbook -t dwm local.yml --ask-become-pass
 docker run -it new-computer bash

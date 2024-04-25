@@ -4,5 +4,6 @@
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     personal: "{{ lookup('env', 'HOME') }}/personal"
   tasks:
-    - include: tasks/ssh.yml
-    - include: tasks/git-setup.yml
+    - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/dwm.yml
+    - import_tasks: tasks/git-setup.yml
