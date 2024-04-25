@@ -1,0 +1,32 @@
+- name: Install dependencies
+  become: true
+  community.general.pacman:
+    update_cache: true
+    state: present
+    name:
+      - base-devel
+  tags:
+    - yay
+
+- name: Check yay
+  stat:
+    path: /usr/bin/yay
+
+  register: yay_stats
+  tags:
+    - yay
+
+- name: Clone yay
+  when: yay_stats.stat.exists == False
+  ansible.builtin.git:
+    repo: https://aur.archlinux.org/yay.git
+    dest: "/tmp/yay"
+    update: no
+  tags:
+    - yay
+
+- name: Install yay
+  when: yay_stats.stat.exists == False
+  shell: cd /tmp/yay && makepkg -si --noconfirm
+  tags:
+    - yay

@@ -1,0 +1,9 @@
+- name: Install yay
+  import_tasks: tasks/yay.yml
+  tags:
+    - brave
+- name: Install Brave
+  shell: yay -S brave-bin --noconfirm
+  tags:
+    - brave
+

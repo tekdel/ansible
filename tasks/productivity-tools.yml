@@ -10,6 +10,7 @@
       - xclip
       - ripgrep
       - shutter
+      - unzip
   tags:
     - install
     - productivity
