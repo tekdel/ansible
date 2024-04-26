@@ -1,0 +1,9 @@
+- name: Install yay
+  import_tasks: tasks/yay.yml
+  tags:
+    - slack
+- name: Install Slack
+  shell: yay -S slack-desktop --noconfirm
+  tags:
+    - slack
+
