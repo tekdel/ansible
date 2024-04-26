@@ -11,5 +11,6 @@
       - i3
       - i3blocks
       - ttf-jetbrains-mono-nerd
+      - dmenu
   tags:
     - i3
