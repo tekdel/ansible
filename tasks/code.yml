@@ -1,0 +1,9 @@
+- name: Install yay
+  import_tasks: tasks/yay.yml
+  tags:
+    - code
+- name: Install Code
+  shell: yay -S visual-studio-code-bin --noconfirm
+  tags:
+    - code
+

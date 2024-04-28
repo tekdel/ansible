@@ -16,4 +16,5 @@
     - import_tasks: tasks/yay.yml
     - import_tasks: tasks/brave.yml
     - import_tasks: tasks/slack.yml
+    - import_tasks: tasks/code.yml
 
