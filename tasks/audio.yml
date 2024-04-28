@@ -1,0 +1,26 @@
+- name: Install packages
+  become: true
+  community.general.pacman:
+    update_cache: true
+    state: present
+    name:
+      - pipewire
+      - pipewire-alsa
+      - pipewire-audio
+      - pipewire-pulse
+      - wireplumber
+      - pulsemixer
+  tags:
+    - audio
+    - system
+- name: Enable pipewire-pulse service
+  shell: systemctl --user enable pipewire-pulse.service
+  tags:
+    - audio
+    - system
+- name: Start pipewire-pulse service
+  shell: systemctl --user start pipewire-pulse.service
+  tags:
+    - audio
+    - system
+
