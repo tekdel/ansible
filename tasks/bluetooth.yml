@@ -1,0 +1,23 @@
+- name: Install packages
+  become: true
+  community.general.pacman:
+    update_cache: true
+    state: present
+    name:
+      - bluez
+      - bluez-utils
+  tags:
+    - bluetooth
+    - system
+- name: Enable bluetooth service
+  become: true
+  shell: systemctl enable bluetooth.service
+  tags:
+    - bluetooth
+    - system
+- name: Start bluetooth service
+  become: true
+  shell: systemctl start bluetooth.service
+  tags:
+    - bluetooth
+    - system
