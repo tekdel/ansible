@@ -12,7 +12,22 @@
       - shutter
       - unzip
       - docker
+      - docker-compose
       - dbeaver
   tags:
-    - install
+    - productivity
+- name: Enable docker
+  become: true
+  shell: systemctl enable docker
+  tags:
+    - productivity
+- name: Start docker
+  become: true
+  shell: systemctl start docker
+  tags:
+    - productivity
+- name: Add user to docker group
+  become: true
+  shell: usermod -aG docker andrei
+  tags:
     - productivity
