@@ -3,3 +3,20 @@
   shell: curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
   tags:
   - node
+
+- name: npmjs prefix
+  shell: mkdir -p ~/.local/.npm-global
+  tags:
+  - node
+
+- name: Add npmjs to path
+  shell: PATH=~/.local/.npm-global/bin:$PATH
+  tags:
+  - install
+  - node
+
+- name: npmjs global settings
+  shell: npm config set prefix '~/.local/.npm-global'
+  tags:
+  - install
+  - node
