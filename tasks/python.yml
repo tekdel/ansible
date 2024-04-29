@@ -1,0 +1,9 @@
+- name: Install Python
+  become: true
+  community.general.pacman:
+    update_cache: true
+    state: present
+    name:
+      - pyenv
+  tags:
+    - python
