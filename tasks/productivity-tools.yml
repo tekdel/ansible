@@ -12,6 +12,7 @@
       - shutter
       - unzip
       - docker
+      - dbeaver
   tags:
     - install
     - productivity
