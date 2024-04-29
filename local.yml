@@ -14,6 +14,7 @@
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/productivity-tools.yml
     - import_tasks: tasks/yay.yml
+    - import_tasks: tasks/node.yml
     - import_tasks: tasks/python.yml
     - import_tasks: tasks/brave.yml
     - import_tasks: tasks/slack.yml

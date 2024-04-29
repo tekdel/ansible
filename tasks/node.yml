@@ -1,0 +1,5 @@
+- name: Install n
+  become: true
+  shell: curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
+  tags:
+  - node
