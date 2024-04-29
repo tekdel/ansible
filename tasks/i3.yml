@@ -6,6 +6,8 @@
     name:
       - xorg-server
       - xorg-xinit
+      - xorg-xrandr
+      - autorandr
       - xterm
       - mesa
       - i3
