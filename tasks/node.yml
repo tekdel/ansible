@@ -1,3 +1,7 @@
+- name: Setup folders
+  become: true
+  shell: mkdir -p /usr/local/n && chown -R andrei:wheel /usr/local/n && mkdir -p /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share && chown -R andrei:wheel /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+
 - name: Install n
   become: true
   shell: curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
