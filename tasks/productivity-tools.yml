@@ -9,7 +9,7 @@
       - gimp
       - xclip
       - ripgrep
-      - shutter
+      - maim # screenshots
       - unzip
       - docker
       - docker-compose
