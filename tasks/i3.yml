@@ -13,6 +13,7 @@
       - i3
       - i3blocks
       - ttf-jetbrains-mono-nerd
+      - noto-fonts-emoji
       - dmenu
   tags:
     - i3
