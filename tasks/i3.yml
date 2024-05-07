@@ -15,5 +15,6 @@
       - ttf-jetbrains-mono-nerd
       - noto-fonts-emoji
       - dmenu
+      - lm_sensors
   tags:
     - i3
