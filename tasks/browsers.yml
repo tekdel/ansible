@@ -1,0 +1,17 @@
+- name: Install yay
+  import_tasks: tasks/yay.yml
+  tags:
+    - browsers
+- name: Install Brave
+  shell: yay -S brave-bin --noconfirm
+  tags:
+    - browsers
+- name: Install Firefox
+  become: true
+  community.general.pacman:
+    update_cache: true
+    state: present
+    name:
+      - firefox
+  tags:
+    - browsers
