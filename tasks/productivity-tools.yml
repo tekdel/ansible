@@ -17,6 +17,16 @@
   tags:
     - productivity
 
+- name: Install yay
+  import_tasks: tasks/yay.yml
+  tags:
+    - productivity
+
+- name: Install Zoom 1Password
+  shell: yay -S zoom 1password --noconfirm
+  tags:
+    - productivity
+
 - name: Enable docker
   become: true
   shell: systemctl enable docker
