@@ -17,6 +17,7 @@
       - alsa-utils
       - bolt # thunderbolt
       - fwupd # thunderbolt
+      - xss-lock
   tags:
     - productivity
 
