@@ -18,6 +18,7 @@
       - bolt # thunderbolt
       - fwupd # thunderbolt
       - xss-lock
+      - avahi
   tags:
     - productivity
 
@@ -27,7 +28,7 @@
     - productivity
 
 - name: Install Zoom 1Password
-  shell: yay -S zoom 1password --noconfirm
+  shell: yay -S zoom 1password uxplay --noconfirm
   tags:
     - productivity
 
