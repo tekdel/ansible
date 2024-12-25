@@ -1,26 +1,8 @@
-- name: Setup folders
-  become: true
-  shell: mkdir -p /usr/local/n && chown -R andrei:wheel /usr/local/n && mkdir -p /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share && chown -R andrei:wheel /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
-
-- name: Install n
-  become: true
-  shell: curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
+- name: Install yay
+  import_tasks: tasks/yay.yml
   tags:
-  - node
-
-- name: npmjs prefix
-  shell: mkdir -p ~/.local/.npm-global
+    - node
+- name: Install Nodenv
+  shell: yay -S nodenv nodenv-node-build --noconfirm
   tags:
-  - node
-
-- name: Add npmjs to path
-  shell: PATH=~/.local/.npm-global/bin:$PATH
-  tags:
-  - install
-  - node
-
-- name: npmjs global settings
-  shell: npm config set prefix '~/.local/.npm-global'
-  tags:
-  - install
-  - node
+    - node

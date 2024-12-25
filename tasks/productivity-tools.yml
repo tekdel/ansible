@@ -19,6 +19,7 @@
       - fwupd # thunderbolt
       - xss-lock
       - avahi
+      - redis
   tags:
     - productivity
 
