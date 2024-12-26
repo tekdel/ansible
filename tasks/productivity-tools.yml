@@ -20,6 +20,7 @@
       - xss-lock
       - avahi
       - redis
+      - keepassxc
   tags:
     - productivity
 
@@ -29,7 +30,7 @@
     - productivity
 
 - name: Install Zoom 1Password
-  shell: yay -S zoom 1password uxplay --noconfirm
+  shell: yay -S zoom 1password uxplay zotify datagrip-jre --noconfirm
   tags:
     - productivity
 

@@ -1,0 +1,9 @@
+- name: Install yay
+  import_tasks: tasks/yay.yml
+  tags:
+    - code
+- name: Install Network Driver
+  shell: yay -S r8152-dkms --noconfirm
+  tags:
+    - code
+
