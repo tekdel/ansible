@@ -21,6 +21,7 @@
       - avahi
       - redis
       - keepassxc
+      - rclone
   tags:
     - productivity
 
