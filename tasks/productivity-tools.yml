@@ -30,11 +30,6 @@
   tags:
     - productivity
 
-- name: Install DataGrip
-  shell: yay -S datagrip-jre --noconfirm
-  tags:
-    - productivity
-
 - name: Install Zotify
   shell: python -m pip install git+https://zotify.xyz/zotify/zotify.git
   tags:
