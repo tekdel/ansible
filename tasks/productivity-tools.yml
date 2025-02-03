@@ -29,6 +29,8 @@
       - ghostscript
       - mpv
       - ffmpegthumbnailer
+      - rbenv
+      - ruby-build
   tags:
     - productivity
 
