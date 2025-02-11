@@ -40,10 +40,10 @@
   tags:
     - productivity
 
-- name: Install Zotify
-  shell: python -m pip install git+https://zotify.xyz/zotify/zotify.git
-  tags:
-    - productivity
+# - name: Install Zotify
+#   shell: python -m pip install git+https://zotify.xyz/zotify/zotify.git
+#   tags:
+#     - productivity
 
 - name: Enable docker
   become: true

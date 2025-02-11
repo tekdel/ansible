@@ -1,6 +1,7 @@
 - name: Ensure .ssh directory exists.
   become: true
   become_user: andrei
+  become_method: su
   file:
     dest: "{{ dest_key | dirname }}"
     mode: 0700
@@ -12,6 +13,7 @@
 - name: Install ssh key
   become: true
   become_user: andrei
+  become_method: su
   copy:
     src: "{{ source_key }}"
     dest: "{{ dest_key }}"
@@ -36,8 +38,10 @@
   become_user: andrei
   become_method: su
   authorized_key:
-    user: "{{ lookup('env', 'USER') }}"
+    user: "andrei"
     state: present
-    key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
+    key: "andrei/.ssh/id_rsa.pub"
   with_fileglob:
-  - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
+  - "andrei/.ssh/*.pub"
+  tags:
+    - ssh

@@ -36,7 +36,7 @@
 - name: Git CurbWaste setup name
   git_config:
     name: user.name
-    scipe: global
+    scope: global
     value: "Andrei Dolgov"
   tags:
   - git-curbwaste
